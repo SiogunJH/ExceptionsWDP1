@@ -4,7 +4,7 @@ namespace TabliceWielowymiaroweZestawWDP1
 {
     class Zadanie3
     {
-        public static void Main()
+        public static void Main3()
         {
             // QuadraticEquation(1, 3, 2);
             // QuadraticEquation(1, -2, 1);
@@ -34,14 +34,11 @@ namespace TabliceWielowymiaroweZestawWDP1
             }
             catch (OverflowException)
             {
-                long temp = b;
-                temp *= b;
-                long temp2 = 4;
-                temp2 *= a;
-                temp2 *= c;
-                delta = Decimal.Parse(temp);
+                long al = (long)a;
+                long bl = (long)b;
+                long cl = (long)c;
+                delta = (bl * bl) - (4 * al * cl);
             }
-            Console.WriteLine(delta);
 
             if (delta < 0 || (a == 0 && b == 0))
             {
